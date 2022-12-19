@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- * _strcpy - copy the string pointed to by src
- * including the terminating null byte, to the
+ * _strcpy - copy the string pointed to by src,
+ * including the terminating null byte, to the,
  * buffer pointed to by dest
  * @dest: destination
  * @src: source
@@ -12,7 +12,7 @@
 
 char *_strcpy(char *dest, char *src)
 {
-	int count = 0
+	int count = 0;
 
 	while (count >= 0)
 	{
