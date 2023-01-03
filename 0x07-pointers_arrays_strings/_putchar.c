@@ -6,7 +6,8 @@
  * @c: char to be printed
  * Return: 1 on success.
  */
-int _putchar(char c)
+
+int _putchar(char c)
 {
 	return (writer(1, &c, 1));
 }
