@@ -35,6 +35,7 @@ int count_word(char *s)
  * Return: pointer to an array of strings (Success)
  * or NULL (Error)
  */
+
 char **strtow(char *str)
 {
 	char **matrix, *tmp;
@@ -75,8 +76,6 @@ char **strtow(char *str)
 		else if (c++ == 0)
 			start = i;
 	}
-
 	matrix[k] = NULL;
-
 	return (matrix);
 }
