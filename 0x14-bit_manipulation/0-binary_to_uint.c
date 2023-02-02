@@ -1,16 +1,33 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * print_binary - converts unsigned int to binary
- * @n: unsigned int
- * Return: binary
+ * binary_to_uint- convert binary to unsigned int
+ * @b: binary
+ * Return: unsigned int
  */
-void print_binary(unsigned long int n)
+unsigned int binary_to_uint(const char *b)
 {
-	if (n > 1)
 
-		print_binary(n >> 1);
+	int night = 0, j;
+	unsigned int number = 0, non_binary = 0;
 
-	_putchar((n & 1) + '0');
+	if (b == NULL)
+		return (non_binary);
+
+	while (b[night] != '\0')
+		night++;
+	night -= 1;
+	j = 0;
+	while (b[j])
+	{
+		if ((b[j] != '0') && (b[j] != '1'))/*&& logical AND operator*/
+			return (non_binary);
+
+		if (b[j] == '1')
+			number += (1 * (1 << night));/*<< bitwise left shift operator*/
+		j++;
+
+		night--;
+	}
+	return (number);
 }
